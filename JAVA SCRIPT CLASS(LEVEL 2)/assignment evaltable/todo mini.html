@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  
+<body>
+    <input type="text" placeholder="Enter your todo" id="userInput"><br><br>
+    <button onclick="addTodo()">Add Todo</button>
+    <button onclick="editTodo()">Edit Todo</button>
+    <button onclick="deleteAllTodo()">Delete All Todo</button>
+    <button>Delete A Todo</button>
+    <script>
+        var allTodo = []
+        function addTodo(){
+            if( !userInput.value){
+                alert("Input something")
+            }else{
+            allTodo.push(userInput.value)
+            userInput.value=""
+            console.log(allTodo)
+        }
+        }
+        function deleteAllTodo(){
+           var userInput = confirm("Are you sure? This action is irreversible!!!!")
+           if(userInput==true){
+            allTodo.splice(0)
+            console.log(allTodo)
+        }else{
+            console.log("oriyo e")
+            console.log(allTodo)
+        }
+        }
+         function editTodo(){
+            var userIndex = prompt("Enter the index you want to change")
+            if (userIndex==""){
+                alert("you think say you dey wise")
+            } else{
+            allTodo.splice(userIndex,1,"wash clothe")
+            console.log(allTodo)
+         }
+        }
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: aquamarine;
+    color: coral;
+    text-align: center;
+    background-image: url(./space1.jpg); background-position: center; background-repeat: no-repeat;
+
+}
+   h1 {
+    font-size: 50px;
+   }
+   input {
+    width: 55px;
+    height: 39px;
+    border-radius: 10px;
+    margin: 9px;
+    font-size: 27px;
+    box-shadow: 2px 2px 2px 2px  purple; 
+ }
+   .btn:hover{
+    background-color: pink;
+    cursor: pointer;
+   }
+
+    

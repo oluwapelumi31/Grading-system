@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="text" placeholder="addtodo" id="userInput" class="form">
+    <button onclick="addTodo()"> AddTodo</button>
+    <button onclick="displayTodo()">Display Todo</button>
+    <div id="output"></div>
+    <script>
+        var allTodo = [] 
+        function addTodo(){
+            output.innerHTML = userInput.value
+            allTodo.push(userInput.value)
+            console.log(allTodo)
+            for (let index = 0; index < allTodo.length; index++) {
+                console.log(allTodo[index])
+                output.innerHTML = `<h1> ${allTodo[index]} </h1>`
+               }
+                } 
+                
+          function displayTodo(){
+            for (let index = 0; index < allTodo.length; index++) {
+                output.innerHTML=userInput.value
+                console.log(allTodo[index])
+                userInput.innerHTML += `<h1>${allTodo[index]}</h1> 
+                <button class>`
+                
+                
+            } 
+          } 
+    </script>
+    
+</body>
+</html>

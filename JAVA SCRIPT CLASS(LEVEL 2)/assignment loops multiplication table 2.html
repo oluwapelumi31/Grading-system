@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiplication table</title>
+</head>
+<body style="text-align:center; margin-top: 20px; background: linear-gradient(To right, violet,#234,#543,orange,pink);">
+    <input type="text" placeholder="input your number" id="userInput">
+    <button onclick="getme()" style="box-shadow: 1px 1px 1px 1px; background-color: cyan;">click</button>
+    <p id="disp"  style="text-decoration:pink; background: linear-gradient(pink,red,purple,green); border-radius: 5px; border: -10px;"></p>
+    <script>
+        function getme(){
+            disp.innerHTML = ""
+        for(var i=1;i<=12;i++){
+            var input = userInput.value
+            console.log(`2 * ${i} = ${i*input}`)
+                disp.innerHTML = disp.innerHTML + `<h2>${input}*${i}=${input*i}</h2>`
+           
+            }
+        }
+    
+    </script>
+    
+</body>
+</html>

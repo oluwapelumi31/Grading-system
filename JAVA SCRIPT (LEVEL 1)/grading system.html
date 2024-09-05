@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Grading System</title>
+</head>
+<body style="text-align:center; background-image: url(./ce9e71dc6f509e76682ef941d01848a6.jpg); background-repeat: no-repeat; background-size: cover;">
+    <h1 style="text-align:center ; color: rgb(255, 0, 0); margin-top: 200px;"> GRADING SYSTEM</h1>
+    <input type="text" placeholder="Enter your score...." style="height:7vh ; border-radius: 10px;" id="scoreInput">
+     <button style="background-color:black; padding:20px; color:white; border: radius 10px; border-radius: 10px;" onclick="grade()"> GRADE</button>
+      <P id="result" style="font-size:50pt; text-align:center;"></P>
+
+    <script>
+        var name = "OLUWAPELUMI";
+        var age = 20;
+        
+         function grade () {
+          var scores = scoreInput.value;
+
+         
+        if ( scores <= 0){
+            result.innerText = "Input your score ";
+            result.style.color ="pink";
+            
+
+          } else if ( scores <= 39 ) {                 
+            result.innerText = "FAIL 🙇🤦‍♀️😪";
+            result.style.color = "RED";
+
+          } else if ( scores > 39 && scores <=49) {
+        result.innerText = "PASS 😒😕";
+        result.style.color = "white";
+          } else if ( scores > 49 && scores <=55) {
+        result.innerText = "GOOD 😊😀";
+        result.style.color = "yellow";
+        }   else if ( scores > 55 && scores <=69) {
+        result.innerText = " VERY GOOD 👍✔✔";
+        result.style.color = "green";
+        }  else if ( scores > 69 && scores <=75) {
+        result.innerText = " EXCELLENT 👏🤩";
+        result.style.color = "blue";
+        } else if ( scores >75 && scores <=100 ) {
+          result.innerText = "DISTINCTION 🎊🎀🎗";
+          result.style.color = "orange";
+        } else if ( typeof scores === "string") {
+          result.innerText = " SCORES CANNOT BE IN LETTERS !!!! 💁‍♀️🤷‍♂️💁‍♂️";
+          result.style.color = "red"
+
+        }  
+    }
+    </script>
+</body>
+</html>

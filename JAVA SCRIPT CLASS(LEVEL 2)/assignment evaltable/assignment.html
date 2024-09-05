@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaltable</title>
+</head>
+<h1>EVALTABLE</h1>
+<body>
+    <input type="text" placeholder="row" id="userInput">
+    <input type="text" placeholder="column" id="disp"><br><br>
+    <button onclick="addition()"> Addition + </button>
+    <button onclick="subtraction()"> Subtraction - </button>
+    <button onclick="multiplication()"> Multiplication * </button>
+    <button onclick="division()"> Division / </button>
+    <table id="myTable" border="1" style="text-align: center; "></table>
+    <script>
+        function addition(){
+            myTable.innerHTML = ""
+            if(userInput.value =="" ){
+            alert("INVALID")
+            }else{
+                for(i=1;i<=12;i++){
+            console.log(`2 * ${i} = ${i*2 }`)
+            myTable.innerHTML +=`
+            <tr>
+                <td>${userInput.value} + ${i} = ${i+userInput.value}</td>
+                </tr>
+                `
+                myTable.style.color= "indigo"
+            }
+             }
+        }
+        function multiplication(){
+            myTable.innerHTML = ""
+            if(userInput.value =="" ){
+            alert("INVALID")
+            }else{
+                for(i=1;i<=12;i++){
+            console.log(`2 * ${i} = ${i*2 }`)
+            myTable.innerHTML +=`
+            <tr>
+                <td>${userInput.value} * ${i} = ${i*userInput.value}</td>
+                </tr>
+                `
+                myTable.style.color= "indigo"
+            }
+             }
+        }
+        function subtraction(){
+            myTable.innerHTML = ""
+            if(userInput.value =="" ){
+            alert("INVALID")
+            }else{
+                for(i=1;i<=12;i++){
+            console.log(`2 * ${i} = ${i*2 }`)
+            myTable.innerHTML +=`
+            <tr>
+                <td>${userInput.value} - ${i} = ${i-userInput.value}</td>
+                </tr>
+                `
+                myTable.style.color= "indigo"
+            }
+             }
+        }
+        function division(){
+            myTable.innerHTML = ""
+            if(userInput.value =="" ){
+            alert("INVALID")
+            }else{
+                for(i=1;i<=12;i++){
+            console.log(`2 * ${i} = ${i*2 }`)
+            myTable.innerHTML +=`
+            <tr>
+                <td>${userInput.value} / ${i} = ${i/userInput.value}</td>
+                </tr>
+                `
+                myTable.style.color= "indigo"
+            }
+             }
+        }
+    </script>
+</body>
+</html>

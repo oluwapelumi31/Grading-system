@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTIPLICATION TABLE</title>
+</head>
+ <style>
+    .body{
+        border: 10px solid aqua;
+        width: 500px;
+        height: 400px;
+        margin-left: 55vh;
+        border-radius: 15px;
+        box-shadow: 5px 5px 5px 5px #75e4;
+        /* background-color: aqua; */
+        background-image: url(./images\ \(7\).jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-top: 39px;
+         }
+         table{
+            margin: auto;
+            margin-top: 10px;
+         }
+ </style>
+<body style="text-align:center; background: linear-gradient(To right,gold,rgb(234, 247, 213), violet,rgb(170, 81, 234) ,rgb(234, 247, 213),gold);">
+    <div class="body">
+    <h2 style="text-align:center; color: brown;">MULTIPLICATION TABLE</h2>
+    <input type="text" placeholder="Input variable" id="userInput" style="text-align: center; ">
+    <button onclick="evalTable()" style="background:linear-gradient(red,orange,yellow); border-radius: 30px;">Create multiplication table</button>
+    <table id="myTable" border="1" style="text-align: center; "></table>
+</div>
+    <script>
+        function evalTable(){
+            myTable.innerHTML = ""
+            if(userInput.value =="" ){
+            alert("INVALID")
+            }else{
+                for(i=1;i<=12;i++){
+            // console.log(i*2)
+            console.log(`2 * ${i} = ${i*2 }`)
+            // myTable.innerHTML +=`<h2> ${userInput.value} * ${i} = ${i*userInput.value} </h2>`
+            myTable.innerHTML +=`
+            <tr>
+                <td>${userInput.value} * ${i} = ${i*userInput.value}</td>
+                </tr>
+                `
+                myTable.style.color= "indigo"
+            }
+             }
+               }
+    </script>
+    
+    
+</body>
+</html>

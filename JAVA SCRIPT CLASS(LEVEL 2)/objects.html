@@ -1,0 +1,146 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+    <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.css">
+</head>
+<h1>Sign Up Page</h1>
+<body style="text-align:center ;" onload="displayStudent()">
+    <div class="container-fluid">
+        <div class="  shadow">
+    <input type="text" placeholder="Enter your first name" id="fname" class=" w-50  border border rounded shadow my-1 "><br>
+    <input type="text" placeholder="Enter your last Name name" id="lname" class=" w-50  border border rounded shadow  my-1"><br>
+    <input type="text" placeholder="Enter your Email" id="mail" class=" w-50 border border rounded shadow my-1"><br>
+    <input type="password" placeholder="Enter your password" id="pass" class=" w-50 border border rounded shadow my-1"><br>
+    <input type="date" class=" w-50 border border rounded shadow my-1"><br>
+    <input type="time" class=" w-50 border border rounded shadow my-1"><br>
+    <button class="bg-info w-50 my-2 border border rounded" onclick="signup()" >Sign Up</button><br>
+    <button class="bg-danger w-50 my-2 border border rounded" onclick="del()">Delete all Student</button>
+    <hr>
+    <div id="disp" class="text-center"></div>
+    <table id="myTable" class="table tale-striped"></table>
+   </div>
+       </div>
+       <hr>
+       <div id="editDiv"></div>
+
+    <script>
+        // var myTable = {
+        //     color:"white",
+        //     shape:"rectangular",
+        //     noOfStands:2
+        // }
+        // console.log(myTable.color)
+        // console.log(myTable["color"])
+
+        // var testimony = {
+        //     height: 6,
+        //     firstName : "Testimony",
+        //     talk:function(){
+        //         console.log("I am talking")
+        //     },
+        //     walk:function(){
+        //         console.log("I am walking")
+        //     }
+        // }
+        //   console.log(testimony.height)
+        //   testimony.walk()
+        // var student = {
+        //     firstName:"Testimony",
+        //     lastName:"Richard",
+        //     email:"tetd@gmail.com",
+        //     password:"fish",
+        // }
+        // if(.value==""){
+        //     alert("Invalid input")
+        // } else {
+        var allStudent = []
+        function signup(){
+            if(fname.value ==""|| lname.value==""|| mail.value==""|| pass.value==""){
+           alert("please fill in the needed information above")
+            } else{
+            var student ={
+            firstName:fname.value,
+            lastName:lname.value,
+            Email:mail.value,
+            Password:pass.value
+        }
+        console.log(allStudent)
+        allStudent.push(student)
+        // localStorage.setItem('local students',JSON.stringify(allStudent))
+        // window.location.href = "practiceloops.html"
+        displayStudent()
+        fname.value = ""
+        lname.value = ""
+        mail.value = ""
+        pass.value = ""
+       }
+    }  
+    function displayStudent(){
+        if(allStudent.length ==0){
+        myTable.innerHTML =""
+        disp.innerHTML +=`<h3>There are no details here, Kindly fill in </h3>`
+    }else{
+        disp.innerHTML = ''
+        myTable.innerHTML = ''
+        myTable.innerHTML = `
+        <tr>
+            <th>S/N</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Action</th>
+            </tr>
+            `
+            for(let index = 0; index<allStudent.length;index++){
+                console.log(allStudent[index].firstName)
+                myTable.innerHTML +=`
+                <tr>
+                    <td>${[index+1]}</td>
+                    <td>${allStudent[index+1].firstName}</td>
+                    <td>${allStudent[index+1].lastName}</td>
+                    <td>${allStudent[index+1].Email}</td>
+                    <td>${allStudent[index+1].Password}</td>
+                    <td><button class="btn btn-danger" onclick ="del()"> Delete User</button></td>
+                        <td><button class="btn btn-warning" onclick ="editUser()"> Edit User</button></td>
+                            </tr>
+                    `
+            }
+        }
+    }
+    function del( userIndex){
+        allStudent.splice(userIndex,1,)
+        displayStudent()
+    }
+    function editUser(){
+        editDiv.innerHTML =`
+        <input type="text" placeholder="firstname" id="editfn">
+        <input type="text" placeholder="lastname" id="editln">
+        <input type="text" placeholder="email" id="editem">
+        <input type="text" placeholder="password" id="editps">
+        <button onclick="updateDetails(${userIndex})">update details</button>`
+        editfn.value = allStudent[userIndex].firstName
+        editln.value = allStudent[userIndex].lastName
+        editem.value = allStudent[userIndex].email
+        editps.value = allStudent[userIndex].password
+    }
+      function updateDetails(index){
+        var newDetails ={
+            firstName : editfn.value,
+            lastName : editln.value,
+            email : editem.value,
+            password : editps.value,
+        }
+        allStudent.splice(index,1,newDetails)
+        console.log(allStudent)
+        displayStudent()
+        editDiv.innerHTML = ""
+      }
+    // }
+    </script>
+    
+</body>
+</html>

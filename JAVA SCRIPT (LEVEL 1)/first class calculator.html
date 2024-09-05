@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+</head>
+<body style="text-align:center;background-color: palevioletred; margin-top: 200px;" >
+    
+    <h1 style="text-align:center ; font-size: 20pt;"></h1>
+    
+    <button id="result" style="background-color:pink ; width: 100px; height:50px;" ></button>
+    <br><br>
+   
+    
+    <input type="text" name="" id="firstNo" placeholder="enter your first number here..." style="height: 8vh;">
+    <input type="text" name="" id="secondNo" placeholder="enter your  second number here..." style="height: 8vh;">
+   
+    
+    
+   <br><br>
+   <button style="background-color:blue ; color:white; padding:20px" onclick="add ()">+</button>
+   <button style="background-color:green ; color:white; padding:20px" onclick="subtract()">-</button>
+   <button style="background-color:red ; color:white; padding:20px" onclick="divide()">/</button><br><br>
+   <button style="background-color:red ; color:white; padding:20px" onclick="multiply()" >*</button>
+   <button style="background-color:pink ; color:white; padding:20px" onclick="result()" >=</button>
+   <button style="background-color:orchid ; color:white; padding:20px" onclick="percentage()" >%</button><br><br>
+   <button style="background-color:red ; color:white; padding:20px" onclick="multiply()" >£</button>
+   <button style="background-color:red ; color:white; padding:20px" onclick="multiply()" >^</button>
+   <button style="background-color:red ; color:white; padding:20px" onclick="multiply()" >&</button><br><br>
+   <button style="background-color:red ; color:white; padding:20px" onclick="multiply()" >!</button>
+   <br><br>
+   
+   
+  
+   
+
+   <script>
+       function add () {
+        var first_num = firstNo.value;
+        var second_num = secondNo.value;
+        var total =Number(first_num) + Number(second_num);
+        result.innerText = total;
+       }
+       function subtract () {
+        var first_num = firstNo.value;
+        var second_num = secondNo.value;
+        var total =Number(first_num) - Number(second_num);
+        result.innerText = total;
+
+       }
+       function divide () {
+        var first_num = firstNo.value;
+        var second_num = secondNo.value;
+        var total =Number(first_num) / Number(second_num);
+        result.innerText = total;
+       }
+       function multiply () {
+        var first_num = firstNo.value;
+        var second_num = secondNo.value;
+        var total =Number(first_num) * Number(second_num);
+        result.innerText = total;
+       }  function result () {
+        var first_num = firstNo.value;
+        var second_num = secondNo.value;
+        var total =Number(first_num) = Number(second_num);
+        result.innerText = total;
+       }  function percentage () {
+        var first_num = firstNo.value;
+        var second_num = secondNo.value;
+        var total =Number(first_num) % Number(second_num);
+        result.innerText = total;
+       } function multiply () {
+        var first_num = firstNo.value;
+        var second_num = secondNo.value;
+        var total =Number(first_num) * Number(second_num);
+        result.innerText = total;
+       }  function multiply () {
+        var first_num = firstNo.value;
+        var second_num = secondNo.value;
+        var total =Number(first_num) * Number(second_num);
+        result.innerText = total;
+       }
+
+
+
+
+        
+
+
+
+
+   </script>
+</body>
+</html>
